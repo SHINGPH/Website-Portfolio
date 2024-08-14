@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     type();
 });
-
 // end of animation
 
 // darkmode

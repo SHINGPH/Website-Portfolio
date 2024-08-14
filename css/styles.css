@@ -181,7 +181,7 @@ nav a:hover {
 }
 
 .skill-item img {
-    max-width: 50px;
+    max-width: 20%;
     margin-right: 15px;
 }
 
@@ -487,7 +487,6 @@ textarea {
     --container-background: #f1f1f1;
     --header-color: #333;
     --email-subtitle-color: #333;
-    /* Updated to remove !important */
     --dev-container-image: url(../assets/img1.png);
 }
 
@@ -502,7 +501,6 @@ textarea {
     --container-background: #444;
     --header-color: #f1f1f1;
     --email-subtitle-color: #f1f1f1;
-    /* Updated to remove !important */
     --dev-container-image: url(../assets/dark.png);
 }
 
