@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     type();
 });
+
 // end of animation
 
 // darkmode
@@ -122,3 +123,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 // end of animation //
+
+// burger menu //
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+}
+// end of burger menu //

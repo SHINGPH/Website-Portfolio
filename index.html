@@ -15,14 +15,20 @@
         <div class="logo">
             <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
         </div>
-        <nav id="menu">
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="menu" class="menu">
+             <div class="close-btn" onclick="toggleMenu()">&times;</div>
             <a href="#home" class="nav-link">Home</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#services" class="nav-link">Services</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
-             <a href="#" id="theme-toggle"><img src="assets/sun.png" alt="Toggle Theme" class="dark-logo"></a>
         </nav>
+        <div class="theme-toggle" id="theme-toggle"><img src="assets/sun.png" alt="Toggle Theme" class="dark-logo"></div>
     </header>
     
     <section class="dev-container" id="home">
@@ -196,7 +202,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="project-card" style="max-width: 49%;">
+        <div class="project-card">
             <img src="assets/ibuilt.jpg" alt="Project Image">
             <div class="project-content">
                 <h3>Noteworthy technology acquisitions 2021</h3>

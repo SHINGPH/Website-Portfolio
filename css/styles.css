@@ -25,7 +25,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 10px 20px;
+    margin-bottom: 0;
+}
+
+.menu{
+    margin-left: 50%;
 }
 
 .logo img {
@@ -112,6 +117,7 @@ nav a:hover {
 
 .resume-btn {
     background-color: #007bff;
+    width: 50%;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -119,6 +125,7 @@ nav a:hover {
     cursor: pointer;
     font-size: 1.2rem;
 }
+
 .dev-image {
     max-width: 50%;
     max-height: 100%;
@@ -129,7 +136,7 @@ nav a:hover {
 /* end of dev container */
 
 /* about container */
-.about-container{
+.about-container {
     background-color: #f1f1f1;
     background-size: cover;
     background-position: center;
@@ -139,27 +146,28 @@ nav a:hover {
     margin-top: 5vw;
 }
 
-.about-title{
+.about-title {
     font-size: 42px;
     font-weight: 700;
     text-align: center;
 }
 
-.about-text{
+.about-text {
     color: #007bff;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 1vw;
 }
 
-.about-subtext{
+.about-subtext {
     color: #848884;
     font-size: 20px;
 }
 
-.divider{
+.divider {
     margin: 5vh;
 }
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -192,7 +200,7 @@ nav a:hover {
 
 /* end of about container */
 
-/* start of services container */
+/*services container */
 .services-container {
     background-color: #f1f1f1;
     padding: 40px 20px;
@@ -264,7 +272,7 @@ nav a:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 50%;
+    max-width: 49%;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -309,6 +317,7 @@ nav a:hover {
 .project-button:hover {
     background-color: #0056b3;
 }
+
 .showmore-btn {
     background-color: #007bff;
     color: white;
@@ -444,7 +453,7 @@ textarea {
     margin-bottom: 20px;
 }
 
-.email-text{
+.email-text {
     color: #007bff !important;
 }
 
@@ -474,6 +483,7 @@ textarea {
     font-size: 2rem !important;
     color: var(--email-subtitle-color);
 }
+
 /* end of contacts */
 /* light mode to dark mode */
 :root {
@@ -603,4 +613,183 @@ button.showmore-btn {
     opacity: 1;
     animation: fadeOut 0.8s forwards;
 }
+
 /* end of animation */
+
+.close-btn {
+    display: none;
+}
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+
+    /* Navbar */
+    #navbar {
+        padding: 10px 20px;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        background-color: var(--navbar-background);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo {
+        flex-grow: 1;
+    }
+
+    #theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+
+    #theme-toggle img {
+        width: 25px;
+        height: 25px;
+    }
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .burger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: var(--navbar-text-color);
+        margin: 2px 0;
+    }
+    nav#menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--navbar-background);
+        z-index: 1000;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    nav#menu.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        color: var(--navbar-text-color);
+        cursor: pointer;
+    }
+
+    .nav-link {
+        font-size: 24px;
+        margin: 20px 0;
+        padding: 10px 15px;
+        color: var(--navbar-text-color);
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+        background-color: var(--highlight-color);
+        color: white;
+    }
+
+    /* end of navbar */
+
+    /* Dev Container */
+    .dev-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 20px;
+    }
+
+
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro .highlight {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .dev-image {
+        max-width: 80%;
+    }
+    /* end of dev container */
+
+    /* Skills Container */
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project-card {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    /* end of skills container */
+
+    /* Contact Grid */
+    .contact-grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-form,
+    .contact-details,.social-icons   {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .email-text {
+        justify-content: center;
+    }
+    /* end of contact grid */
+
+    /* Footer */
+    .footer {
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+}
+
+/* end of mobile responsive */
+
+/* tablet responsive */
